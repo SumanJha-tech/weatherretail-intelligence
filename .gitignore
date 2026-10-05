@@ -1,0 +1,10 @@
+# .gitignore
+venv/
+.env
+__pycache__/
+*.pyc
+logs/*.log
+data/raw/
+data/processed/
+.ipynb_checkpoints/
+.pytest_cache/

@@ -1,0 +1,9 @@
+product_category,weather_driver,correlation_r,p_value,slope_units_per_unit_weather,sensitivity_label
+Bottled Water & Sports Drinks,temp_max_c,0.895,0.0,1.241,High
+Ice Cream & Frozen Treats,temp_max_c,0.891,0.0,1.239,High
+Sunscreen & Summer Essentials,temp_max_c,0.891,0.0,1.243,High
+Hot Beverages & Soup,temp_max_c,-0.705,0.0,-0.601,High
+Outerwear & Jackets,temp_max_c,-0.703,0.0,-0.613,High
+Umbrellas & Rain Gear,precipitation_mm,0.658,0.0,0.859,High
+Household Staples (control),temp_max_c,0.464,0.0,0.328,Medium
+Snow Removal & Winter Gear,snowfall_cm,0.078,0.0,0.762,Low

@@ -1,4 +1,4 @@
--- Query 1 — Revenue over time
+-- Monthly revenue and units.
 SELECT date_trunc('month', date) AS month,
        SUM(revenue) AS monthly_revenue,
        SUM(units_sold) AS monthly_units
@@ -6,7 +6,7 @@ FROM vw_sales_weather
 GROUP BY 1
 ORDER BY 1;
 
--- Query 2 — Sales by temperature bucket
+-- Mean units by temperature band. The numeric prefix keeps bands in climate order.
 SELECT
     product_category,
     CASE
@@ -20,7 +20,7 @@ FROM vw_sales_weather
 GROUP BY 1, 2
 ORDER BY 1, 2;
 
--- Query 3 — Stockout rate by store and product
+-- Stockout rate: stockout days divided by observed days, by store and category.
 SELECT
     store_id,
     product_category,
@@ -29,7 +29,7 @@ FROM vw_sales_weather
 GROUP BY 1, 2
 ORDER BY stockout_rate_pct DESC;
 
--- Query 4 — Month-over-month revenue growth
+-- Month-over-month revenue growth. The first month has no prior period.
 WITH monthly AS (
     SELECT date_trunc('month', date) AS month, SUM(revenue) AS revenue
     FROM vw_sales_weather GROUP BY 1
@@ -42,7 +42,8 @@ SELECT
 FROM monthly
 ORDER BY month;
 
--- Query 5 — 7-day moving average of units sold
+-- Seven-day moving average within each store and category.
+-- The first six days of each series are a partial window.
 SELECT
     date, store_id, product_category, units_sold,
     ROUND(AVG(units_sold) OVER (
@@ -53,7 +54,7 @@ SELECT
 FROM vw_sales_weather
 ORDER BY store_id, product_category, date;
 
--- Query 6 — Overstock finder (more than 14 days of stock sitting unused)
+-- Days of supply above 14. Cover uses that store-category's own average daily units.
 WITH avg_demand AS (
     SELECT store_id, product_category, AVG(units_sold) AS avg_daily_units
     FROM vw_sales_weather GROUP BY 1, 2

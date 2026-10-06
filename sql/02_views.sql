@@ -1,3 +1,5 @@
+-- Store × category × day, with that city's weather on the same date.
+-- Weather has no store_id; the join key is city + date.
 CREATE OR REPLACE VIEW vw_sales_weather AS
 SELECT
     s.date,

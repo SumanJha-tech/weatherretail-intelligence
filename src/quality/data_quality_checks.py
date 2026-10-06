@@ -1,3 +1,8 @@
+"""Checks that report problems and leave the frame unchanged.
+
+Cleaning is the step that rewrites values. A failed check is a log line,
+not a mutation and not a load blocker.
+"""
 import pandas as pd
 from src.utils.logger import get_logger
 
@@ -37,6 +42,7 @@ def check_sales(df: pd.DataFrame, dim_store: pd.DataFrame, dim_product: pd.DataF
 def check_weather(df: pd.DataFrame) -> dict:
     report = {"rows_checked": len(df), "errors_found": 0, "issues": []}
 
+    # Bounds for these six U.S. cities, not a global climate limit.
     out_of_range = ((df["temp_max_c"] < -40) | (df["temp_max_c"] > 50)).sum()
     if out_of_range:
         report["issues"].append(f"{out_of_range} rows with temp_max_c outside -40C to 50C")
@@ -57,7 +63,7 @@ def check_weather(df: pd.DataFrame) -> dict:
 def check_forecast_freshness(forecast_df: pd.DataFrame, today: pd.Timestamp) -> dict:
     max_date = pd.to_datetime(forecast_df["date"]).max()
     days_ahead = (max_date - today).days
-    is_fresh = days_ahead >= 6
+    is_fresh = days_ahead >= 6  # the risk job needs a full forecast week
     return {"is_fresh": is_fresh, "days_of_forecast_available": days_ahead}
 
 

@@ -1,3 +1,10 @@
+"""Seeded daily sales for six stores and eight categories.
+
+Demand is a base rate, a seasonal wave, a planted weather response, a weekend
+lift, and noise. The weather term uses the cached Open-Meteo history for that
+city, so the sensitivity model is recovering a known signal from real weather.
+Household Staples has no weather term.
+"""
 import os
 import numpy as np
 import pandas as pd
@@ -6,7 +13,7 @@ from config.settings import STORES, PRODUCTS, DATE_START, DATE_END, RAW_SALES_DI
 from src.utils.logger import get_logger
 
 logger = get_logger(__name__)
-RNG_SEED = 42  # fixed seed -> same output every time you run this (reproducibility)
+RNG_SEED = 42
 
 
 def build_dim_date(start, end) -> pd.DataFrame:
@@ -49,7 +56,7 @@ def build_dim_product() -> pd.DataFrame:
 
 
 def _load_city_weather(city: str) -> pd.DataFrame | None:
-    """Reads the weather this city already has cached, so sales can react to REAL weather."""
+    """Cached city history, or None when fetch_weather has not been run."""
     path = os.path.join(WEATHER_CACHE_DIR, f"{city.replace(' ', '_')}_history.csv")
     if not os.path.exists(path):
         return None
@@ -58,7 +65,7 @@ def _load_city_weather(city: str) -> pd.DataFrame | None:
 
 
 def _seasonal_wave(day_of_year: np.ndarray) -> np.ndarray:
-    """A smooth up-and-down wave across the year, peaking in summer."""
+    """Seasonal factor in [-1, 1]. The 80-day shift puts the peak in late June."""
     return np.sin(2 * np.pi * (day_of_year - 80) / 365.0)
 
 
@@ -81,11 +88,13 @@ def generate_fact_sales(dim_date: pd.DataFrame, dim_store: pd.DataFrame, dim_pro
             merged["snowfall_cm"] = merged.get("snowfall_cm", pd.Series(dtype=float)).fillna(0.0)
 
             day_of_year = merged["date"].dt.dayofyear.values
-            seasonal = _seasonal_wave(day_of_year) * 8  # +/- 8 units from the yearly wave
+            seasonal = _seasonal_wave(day_of_year) * 8
 
+            # Planted response, in units per day. Temperature is centered at 15°C:
+            # 0.9 per °C, 0.8 per mm of rain, 1.5 per cm of snow.
+            # The control category leaves weather_driver null and stays at zero.
             weather_effect = np.zeros(len(merged))
             if weather_driver == "temp_max_c":
-                direction = 1 if "Hot" in product["expected_direction"] or "hot" in str(product["primary_weather_driver"]) else -1
                 direction = 1 if product["expected_direction"].startswith("up_when_hot") else -1
                 weather_effect = direction * (merged["temp_max_c"].values - 15) * 0.9
             elif weather_driver == "precipitation_mm":
@@ -99,7 +108,8 @@ def generate_fact_sales(dim_date: pd.DataFrame, dim_store: pd.DataFrame, dim_pro
             demand = (base_demand + seasonal + weather_effect) * weekend_mult + noise
             demand = np.clip(demand, 0, None).round().astype(int)
 
-            # --- simple inventory simulation: starting stock + weekly deliveries ---
+            # Monday replenishment at 110% of mean weekly demand.
+            # Units sold cannot exceed on-hand; the gap is a stockout.
             inventory = 200
             weekly_delivery = int(demand.mean() * 7 * 1.1)
             units_sold_list, inventory_list, replenished_list, stockout_list = [], [], [], []

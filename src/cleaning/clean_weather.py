@@ -5,6 +5,7 @@ logger = get_logger(__name__)
 
 
 def clean_weather(df: pd.DataFrame) -> pd.DataFrame:
+    """One row per city-day. Gaps are forward-filled inside a city, never across cities."""
     df = df.copy()
     df["date"] = pd.to_datetime(df["date"]).dt.date
     df["city"] = df["city"].str.strip().str.title()
@@ -15,7 +16,6 @@ def clean_weather(df: pd.DataFrame) -> pd.DataFrame:
     for col in ["precipitation_mm", "snowfall_cm"]:
         df[col] = df[col].clip(lower=0)
 
-    # Fill small gaps (a missing day here and there) using the previous day's value, per city.
     weather_cols = ["temp_max_c", "temp_min_c", "precipitation_mm", "snowfall_cm", "windspeed_max_kmh"]
     filled_count = df[weather_cols].isna().sum().sum()
     df[weather_cols] = df.groupby("city")[weather_cols].ffill()

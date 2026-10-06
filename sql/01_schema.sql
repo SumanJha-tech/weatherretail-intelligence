@@ -1,4 +1,4 @@
--- Run this once to create all tables. Safe to re-run: it drops old tables first.
+-- Rebuilds the star schema. Drop order follows foreign keys so the script can be re-run.
 
 DROP TABLE IF EXISTS fact_risk_forecast;
 DROP TABLE IF EXISTS fact_weather_daily;
@@ -7,8 +7,7 @@ DROP TABLE IF EXISTS dim_product;
 DROP TABLE IF EXISTS dim_store;
 DROP TABLE IF EXISTS dim_date;
 
--- dim_date: one row per calendar day, with pre-computed helpers so queries
--- don't have to repeat date math every time.
+-- Calendar attributes. Precomputed so analysis queries do not repeat date logic.
 CREATE TABLE dim_date (
     date            DATE PRIMARY KEY,
     day_of_week     TEXT NOT NULL,
@@ -18,7 +17,7 @@ CREATE TABLE dim_date (
     season          TEXT NOT NULL
 );
 
--- dim_store: one row per physical store.
+-- One store per city. Coordinates are the Open-Meteo request point for that city.
 CREATE TABLE dim_store (
     store_id        TEXT PRIMARY KEY,
     store_name      TEXT NOT NULL,
@@ -28,16 +27,18 @@ CREATE TABLE dim_store (
     longitude       NUMERIC(8, 4) NOT NULL
 );
 
--- dim_product: one row per product category.
+-- Category is the product grain.
+-- primary_weather_driver is null for Household Staples (the control).
+-- expected_direction is up_when_hot_or_wet, up_when_cold, or none.
 CREATE TABLE dim_product (
     product_category        TEXT PRIMARY KEY,
     department               TEXT NOT NULL,
     avg_unit_price            NUMERIC(10, 2) NOT NULL,
-    primary_weather_driver    TEXT,              -- NULL for the control product
-    expected_direction        TEXT NOT NULL       -- 'up_when_hot', 'up_when_cold', 'up_when_rainy', 'up_when_snowy', 'none'
+    primary_weather_driver    TEXT,
+    expected_direction        TEXT NOT NULL
 );
 
--- fact_sales: the center of the whole database. One row per store + product + day.
+-- One row per store, category, and day. Revenue is units × price, recomputed during cleaning.
 CREATE TABLE fact_sales (
     date                DATE NOT NULL REFERENCES dim_date(date),
     store_id            TEXT NOT NULL REFERENCES dim_store(store_id),
@@ -53,7 +54,8 @@ CREATE TABLE fact_sales (
 CREATE INDEX idx_fact_sales_store   ON fact_sales(store_id);
 CREATE INDEX idx_fact_sales_product ON fact_sales(product_category);
 
--- fact_weather_daily: real historical weather, one row per city + day.
+-- Daily weather for a store city. History is what load_to_db writes.
+-- The live forecast can be appended here; risk scoring reads rows dated today or later.
 CREATE TABLE fact_weather_daily (
     date                DATE NOT NULL,
     city                TEXT NOT NULL,
@@ -65,9 +67,7 @@ CREATE TABLE fact_weather_daily (
     PRIMARY KEY (date, city)
 );
 
--- fact_risk_forecast: NOT raw data — this is the OUTPUT of our own Python
--- risk model (src/analysis/risk_scoring.py), saved back so the dashboard
--- can query it like any other table.
+-- Output of src/analysis/risk_scoring.py, stored so SQL and the dashboard read it like any other table.
 CREATE TABLE fact_risk_forecast (
     forecast_date               DATE NOT NULL,
     store_id                    TEXT NOT NULL REFERENCES dim_store(store_id),

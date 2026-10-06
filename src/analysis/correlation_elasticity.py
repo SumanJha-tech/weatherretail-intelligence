@@ -1,3 +1,9 @@
+"""Pearson r and a one-variable OLS slope per category.
+
+|r| >= 0.50 is High, >= 0.25 is Medium, otherwise Low. Household Staples has
+no planted driver and is still scored against temperature, so a false High
+on the control is visible.
+"""
 import os
 import pandas as pd
 from scipy.stats import pearsonr
@@ -20,13 +26,12 @@ def _sensitivity_label(r: float) -> str:
 
 
 def compute_sensitivity(df: pd.DataFrame) -> pd.DataFrame:
-    """df must have columns: product_category, primary_weather_driver, units_sold,
-    temp_max_c, precipitation_mm, snowfall_cm"""
+    """Requires product_category, primary_weather_driver, units_sold, and the three weather columns."""
     results = []
     for product, group in df.groupby("product_category"):
         driver = group["primary_weather_driver"].iloc[0]
         if pd.isna(driver):
-            driver = "temp_max_c"  # still measure the control group against temperature, expect ~0
+            driver = "temp_max_c"
 
         x = group[driver].values
         y = group["units_sold"].values
@@ -61,9 +66,12 @@ def main():
 
     control_row = sensitivity_df[sensitivity_df["product_category"].str.contains("control")]
     if not control_row.empty and abs(control_row.iloc[0]["correlation_r"]) < 0.25:
-        logger.info("Sanity check PASSED: control product shows weak correlation, as expected.")
+        logger.info("Control check passed: Household Staples |r| is below 0.25.")
     else:
-        logger.warning("Sanity check WARNING: control product shows unexpectedly strong correlation — review your data generator.")
+        logger.warning(
+            "Control check: Household Staples |r| is 0.25 or higher. "
+            "A one-variable correlation also picks up season. Do not treat that score as a weather buy signal."
+        )
 
 
 if __name__ == "__main__":

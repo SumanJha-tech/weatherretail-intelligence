@@ -13,6 +13,7 @@ logger = get_logger(__name__)
 
 
 def load_dataframe(df: pd.DataFrame, table_name: str) -> None:
+    """Full refresh. CASCADE lets a dimension reload while facts still reference it."""
     engine = get_engine()
     with engine.begin() as conn:
         conn.execute(text(f"TRUNCATE TABLE {table_name} CASCADE"))
@@ -32,6 +33,7 @@ def main():
     clean_sales_df = clean_sales(raw_sales)
     clean_weather_df = clean_weather(raw_weather)
 
+    # Observational only: a failing report is logged and does not stop the load.
     sales_report = check_sales(clean_sales_df, dim_store, dim_product, dim_date)
     log_report("fact_sales", sales_report)
     weather_report = check_weather(clean_weather_df)
@@ -40,7 +42,7 @@ def main():
     clean_sales_df.to_csv(os.path.join(PROCESSED_DIR, "fact_sales_clean.csv"), index=False)
     clean_weather_df.to_csv(os.path.join(PROCESSED_DIR, "fact_weather_clean.csv"), index=False)
 
-    # Load in dependency order: dimension tables first, then fact tables.
+    # Dimensions first. Foreign keys reject facts loaded ahead of their keys.
     load_dataframe(dim_date, "dim_date")
     load_dataframe(dim_store, "dim_store")
     load_dataframe(dim_product, "dim_product")

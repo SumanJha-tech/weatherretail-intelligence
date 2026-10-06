@@ -5,7 +5,7 @@ from config.settings import DATABASE_URL
 _engine: Engine | None = None
 
 def get_engine() -> Engine:
-    """Returns one shared SQLAlchemy engine (connection pool) for the whole app."""
+    """Process-wide engine. pool_pre_ping drops connections Postgres has already closed."""
     global _engine
     if _engine is None:
         _engine = create_engine(DATABASE_URL, pool_pre_ping=True)

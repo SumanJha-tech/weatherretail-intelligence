@@ -5,6 +5,11 @@ logger = get_logger(__name__)
 
 
 def clean_sales(df: pd.DataFrame) -> pd.DataFrame:
+    """Normalize keys, enforce the grain, and recompute revenue.
+
+    Grain is (date, store_id, product_category). Negative quantities are
+    floored at zero and kept; they are not dropped.
+    """
     before = len(df)
     df = df.copy()
 

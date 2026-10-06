@@ -1,5 +1,9 @@
+"""Dashboard reads. Cached for 10 minutes so a filter change does not re-query Postgres."""
+import os
+
 import pandas as pd
 import streamlit as st
+from config.settings import PROCESSED_DIR
 from src.db.connection import get_engine
 
 
@@ -27,8 +31,6 @@ def load_products() -> pd.DataFrame:
 
 @st.cache_data(ttl=600)
 def load_sensitivity_scores() -> pd.DataFrame:
-    import os
-    from config.settings import PROCESSED_DIR
     path = os.path.join(PROCESSED_DIR, "sensitivity_scores.csv")
     return pd.read_csv(path)
 

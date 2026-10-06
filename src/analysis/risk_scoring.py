@@ -1,3 +1,9 @@
+"""Seven-day risk score for High and Medium categories.
+
+Low categories are omitted so the action list stays short enough to run
+from. The score is |forecast z| × |correlation| × inventory pressure,
+scaled so a 3σ day with an empty shelf is 100.
+"""
 import os
 import pandas as pd
 import numpy as np
@@ -17,7 +23,7 @@ def compute_weather_anomaly_z(forecast_value: float, historical_mean: float, his
 
 
 def compute_inventory_pressure(current_inventory: float, healthy_inventory: float) -> float:
-    """1.0 = almost no stock left, 0.0 = plenty of stock. Clipped to [0, 1]."""
+    """1 when the shelf is empty relative to typical on-hand, 0 when cover is at or above it."""
     if healthy_inventory == 0:
         return 0.0
     pressure = 1 - (current_inventory / healthy_inventory)
@@ -25,6 +31,11 @@ def compute_inventory_pressure(current_inventory: float, healthy_inventory: floa
 
 
 def compute_risk_score(weather_anomaly_z: float, sensitivity_score: float, inventory_pressure: float) -> float:
+    """Map |z| × |r| × inventory pressure onto 0–100.
+
+    The divisor treats a 3σ forecast, sensitivity of 1, and an empty shelf as 100.
+    Larger inputs clip.
+    """
     score = abs(weather_anomaly_z) * sensitivity_score * inventory_pressure * (100 / 3)
     return round(float(np.clip(score, 0, 100)), 2)
 
@@ -66,7 +77,7 @@ def main():
     results = []
     for _, sens_row in sensitivity_df.iterrows():
         if sens_row["sensitivity_label"] == "Low":
-            continue  # only score products that actually respond to weather
+            continue
 
         driver = sens_row["weather_driver"]
         product = sens_row["product_category"]

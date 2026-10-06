@@ -1,0 +1,58 @@
+# Light theme, locked. One [theme] block so the app cannot switch to dark.
+
+[theme]
+base = "light"
+primaryColor = "#2C6B58"
+backgroundColor = "#F6F4EF"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#1F1A17"
+linkColor = "#2C6B58"
+borderColor = "#E7E1D8"
+codeTextColor = "#1F1A17"
+codeBackgroundColor = "#F4F1F8"
+showWidgetBorder = true
+showSidebarBorder = true
+baseRadius = "14px"
+buttonRadius = "10px"
+linkUnderline = false
+
+font = "'Manrope':https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+headingFont = "'Manrope':https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&display=swap"
+codeFont = "'JetBrains Mono':https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap"
+baseFontSize = 15
+baseFontWeight = 400
+codeFontSize = "13px"
+headingFontSizes = ["32px", "24px", "18px", "16px", "14px", "13px"]
+headingFontWeights = [600, 600, 600, 500, 500, 500]
+
+redColor = "#B24D62"
+redBackgroundColor = "#F8E4E6"
+redTextColor = "#7A2430"
+orangeColor = "#8A5A16"
+orangeBackgroundColor = "#F8EFD6"
+orangeTextColor = "#7A5410"
+yellowColor = "#8A5A16"
+yellowBackgroundColor = "#F8EFD6"
+yellowTextColor = "#7A5410"
+greenColor = "#2C6B58"
+greenBackgroundColor = "#E5F3EC"
+greenTextColor = "#1E5C40"
+blueColor = "#5C5348"
+violetColor = "#6B5EA8"
+violetBackgroundColor = "#F0ECF8"
+violetTextColor = "#3E3568"
+grayColor = "#5C564F"
+
+chartCategoricalColors = ["#2F7A68", "#8A5A16", "#6B5EA8", "#B24D62", "#3E7C6E", "#7A6548", "#7D6B9A", "#5C564F"]
+chartSequentialColors = ["#F4F1EA", "#E7F3EE", "#CDE6DC", "#A9D4C4", "#7EBA9F", "#559B82", "#3D846C", "#2C6B58", "#1E5344", "#14382E"]
+
+dataframeBorderColor = "#E7E1D8"
+dataframeHeaderBackgroundColor = "#F3F0EA"
+
+[theme.sidebar]
+backgroundColor = "#F3F0F8"
+secondaryBackgroundColor = "#FFFFFF"
+codeBackgroundColor = "#FFFFFF"
+textColor = "#1F1A17"
+borderColor = "#E4DDEA"
+primaryColor = "#2C6B58"

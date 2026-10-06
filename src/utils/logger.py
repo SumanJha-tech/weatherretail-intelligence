@@ -5,10 +5,10 @@ from config.settings import LOGS_DIR
 os.makedirs(LOGS_DIR, exist_ok=True)
 
 def get_logger(name: str) -> logging.Logger:
-    """Returns a logger that writes to both the terminal and logs/pipeline.log."""
+    """INFO logger writing to stderr and logs/pipeline.log."""
     logger = logging.getLogger(name)
     if logger.handlers:
-        return logger  # avoid duplicate handlers if called more than once
+        return logger  # getLogger is process-global; a second call must not add another handler
 
     logger.setLevel(logging.INFO)
     formatter = logging.Formatter("%(asctime)s | %(name)s | %(levelname)s | %(message)s")

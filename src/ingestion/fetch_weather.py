@@ -1,3 +1,9 @@
+"""Open-Meteo history and a 7-day forecast for each store city.
+
+History is cached until the file is deleted: the archive for a closed date
+does not change. A forecast file is reused for six hours, then fetched again.
+After three failed attempts the city falls back to data/sample/weather_backup.csv.
+"""
 import os
 import time
 import requests
@@ -7,6 +13,7 @@ from config.settings import STORES, DATE_START, DATE_END, WEATHER_CACHE_DIR, SAM
 from src.utils.logger import get_logger
 
 logger = get_logger(__name__)
+FORECAST_CACHE_TTL_SECONDS = 6 * 60 * 60
 
 HISTORY_URL = "https://archive-api.open-meteo.com/v1/archive"
 FORECAST_URL = "https://api.open-meteo.com/v1/forecast"
@@ -67,11 +74,10 @@ def fetch_history_for_city(city: str, lat: float, lon: float) -> pd.DataFrame:
 
 
 def fetch_forecast_for_city(city: str, lat: float, lon: float) -> pd.DataFrame:
-    """7-day forecast, cached for a few hours only since forecasts change often."""
     cache_path = os.path.join(WEATHER_CACHE_DIR, f"{city.replace(' ', '_')}_forecast.csv")
     if os.path.exists(cache_path):
         age_seconds = time.time() - os.path.getmtime(cache_path)
-        if age_seconds < 6 * 3600:  # 6 hours
+        if age_seconds < FORECAST_CACHE_TTL_SECONDS:
             logger.info(f"[{city}] Using cached forecast (still fresh).")
             return pd.read_csv(cache_path, parse_dates=["date"])
 
@@ -93,8 +99,8 @@ def _load_backup_for_city(city: str) -> pd.DataFrame:
     backup_path = os.path.join(SAMPLE_DIR, "weather_backup.csv")
     if not os.path.exists(backup_path):
         raise FileNotFoundError(
-            f"No cached weather, no internet, and no backup file at {backup_path}. "
-            "Create a small sample weather CSV there (see PROJECT_GUIDE.md Section 8.3)."
+            f"No cache, no API response, and no backup at {backup_path}. "
+            "Place a city-level weather CSV there to run offline."
         )
     df = pd.read_csv(backup_path, parse_dates=["date"])
     return df[df["city"] == city].copy()

@@ -1,0 +1,7 @@
+store_id,store_name,city,region,latitude,longitude
+NM-NYC,NorthStar Mart - New York,New York,Northeast,40.7128,-74.006
+NM-CHI,NorthStar Mart - Chicago,Chicago,Midwest,41.8781,-87.6298
+NM-MIA,NorthStar Mart - Miami,Miami,Southeast,25.7617,-80.1918
+NM-PHX,NorthStar Mart - Phoenix,Phoenix,Southwest,33.4484,-112.074
+NM-SEA,NorthStar Mart - Seattle,Seattle,Northwest,47.6062,-122.3321
+NM-DEN,NorthStar Mart - Denver,Denver,Mountain,39.7392,-104.9903

@@ -1,0 +1,9 @@
+product_category,department,avg_unit_price,primary_weather_driver,expected_direction
+Ice Cream & Frozen Treats,Grocery,4.5,temp_max_c,up_when_hot_or_wet
+Bottled Water & Sports Drinks,Grocery,2.0,temp_max_c,up_when_hot_or_wet
+Hot Beverages & Soup,Grocery,5.0,temp_max_c,up_when_cold
+Umbrellas & Rain Gear,Seasonal,12.0,precipitation_mm,up_when_hot_or_wet
+Outerwear & Jackets,Apparel,65.0,temp_max_c,up_when_cold
+Sunscreen & Summer Essentials,Health & Beauty,9.0,temp_max_c,up_when_hot_or_wet
+Snow Removal & Winter Gear,Seasonal,22.0,snowfall_cm,up_when_hot_or_wet
+Household Staples (control),Grocery,6.0,,none

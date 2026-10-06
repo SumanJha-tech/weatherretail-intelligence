@@ -1,0 +1,295 @@
+forecast_date,store_id,product_category,forecasted_weather_value,weather_anomaly_z,sensitivity_score,inventory_pressure,risk_score,recommended_action
+2026-10-06,NM-NYC,Bottled Water & Sports Drinks,17.3,-0.082,0.895,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-NYC,Bottled Water & Sports Drinks,19.9,0.196,0.895,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-NYC,Bottled Water & Sports Drinks,24.4,0.678,0.895,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-NYC,Bottled Water & Sports Drinks,20.6,0.271,0.895,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-NYC,Bottled Water & Sports Drinks,17.7,-0.039,0.895,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-NYC,Bottled Water & Sports Drinks,21.4,0.357,0.895,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-NYC,Bottled Water & Sports Drinks,18.4,0.036,0.895,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-CHI,Bottled Water & Sports Drinks,21.5,0.575,0.895,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-CHI,Bottled Water & Sports Drinks,20.8,0.507,0.895,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-CHI,Bottled Water & Sports Drinks,19.2,0.351,0.895,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-CHI,Bottled Water & Sports Drinks,20.2,0.448,0.895,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-CHI,Bottled Water & Sports Drinks,27.9,1.2,0.895,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-CHI,Bottled Water & Sports Drinks,23.5,0.771,0.895,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-CHI,Bottled Water & Sports Drinks,16.5,0.087,0.895,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-MIA,Bottled Water & Sports Drinks,29.2,0.307,0.895,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-MIA,Bottled Water & Sports Drinks,28.8,0.176,0.895,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-MIA,Bottled Water & Sports Drinks,30.2,0.636,0.895,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-MIA,Bottled Water & Sports Drinks,30.2,0.636,0.895,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-MIA,Bottled Water & Sports Drinks,29.8,0.504,0.895,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-MIA,Bottled Water & Sports Drinks,30.1,0.603,0.895,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-MIA,Bottled Water & Sports Drinks,30.2,0.636,0.895,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-PHX,Bottled Water & Sports Drinks,37.4,0.707,0.895,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-PHX,Bottled Water & Sports Drinks,38.8,0.85,0.895,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-PHX,Bottled Water & Sports Drinks,37.8,0.748,0.895,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-PHX,Bottled Water & Sports Drinks,37.2,0.686,0.895,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-PHX,Bottled Water & Sports Drinks,36.7,0.635,0.895,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-PHX,Bottled Water & Sports Drinks,34.1,0.369,0.895,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-PHX,Bottled Water & Sports Drinks,30.8,0.032,0.895,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-SEA,Bottled Water & Sports Drinks,17.0,0.229,0.895,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-SEA,Bottled Water & Sports Drinks,19.8,0.635,0.895,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-SEA,Bottled Water & Sports Drinks,23.6,1.185,0.895,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-SEA,Bottled Water & Sports Drinks,14.8,-0.09,0.895,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-SEA,Bottled Water & Sports Drinks,14.7,-0.105,0.895,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-SEA,Bottled Water & Sports Drinks,14.6,-0.119,0.895,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-SEA,Bottled Water & Sports Drinks,16.8,0.2,0.895,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-DEN,Bottled Water & Sports Drinks,30.3,1.066,0.895,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-DEN,Bottled Water & Sports Drinks,30.3,1.066,0.895,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-DEN,Bottled Water & Sports Drinks,28.9,0.943,0.895,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-DEN,Bottled Water & Sports Drinks,29.7,1.014,0.895,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-DEN,Bottled Water & Sports Drinks,27.7,0.837,0.895,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-DEN,Bottled Water & Sports Drinks,23.8,0.494,0.895,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-DEN,Bottled Water & Sports Drinks,23.6,0.476,0.895,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-NYC,Ice Cream & Frozen Treats,17.3,-0.082,0.891,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-NYC,Ice Cream & Frozen Treats,19.9,0.196,0.891,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-NYC,Ice Cream & Frozen Treats,24.4,0.678,0.891,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-NYC,Ice Cream & Frozen Treats,20.6,0.271,0.891,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-NYC,Ice Cream & Frozen Treats,17.7,-0.039,0.891,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-NYC,Ice Cream & Frozen Treats,21.4,0.357,0.891,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-NYC,Ice Cream & Frozen Treats,18.4,0.036,0.891,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-CHI,Ice Cream & Frozen Treats,21.5,0.575,0.891,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-CHI,Ice Cream & Frozen Treats,20.8,0.507,0.891,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-CHI,Ice Cream & Frozen Treats,19.2,0.351,0.891,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-CHI,Ice Cream & Frozen Treats,20.2,0.448,0.891,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-CHI,Ice Cream & Frozen Treats,27.9,1.2,0.891,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-CHI,Ice Cream & Frozen Treats,23.5,0.771,0.891,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-CHI,Ice Cream & Frozen Treats,16.5,0.087,0.891,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-MIA,Ice Cream & Frozen Treats,29.2,0.307,0.891,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-MIA,Ice Cream & Frozen Treats,28.8,0.176,0.891,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-MIA,Ice Cream & Frozen Treats,30.2,0.636,0.891,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-MIA,Ice Cream & Frozen Treats,30.2,0.636,0.891,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-MIA,Ice Cream & Frozen Treats,29.8,0.504,0.891,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-MIA,Ice Cream & Frozen Treats,30.1,0.603,0.891,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-MIA,Ice Cream & Frozen Treats,30.2,0.636,0.891,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-PHX,Ice Cream & Frozen Treats,37.4,0.707,0.891,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-PHX,Ice Cream & Frozen Treats,38.8,0.85,0.891,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-PHX,Ice Cream & Frozen Treats,37.8,0.748,0.891,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-PHX,Ice Cream & Frozen Treats,37.2,0.686,0.891,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-PHX,Ice Cream & Frozen Treats,36.7,0.635,0.891,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-PHX,Ice Cream & Frozen Treats,34.1,0.369,0.891,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-PHX,Ice Cream & Frozen Treats,30.8,0.032,0.891,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-SEA,Ice Cream & Frozen Treats,17.0,0.229,0.891,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-SEA,Ice Cream & Frozen Treats,19.8,0.635,0.891,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-SEA,Ice Cream & Frozen Treats,23.6,1.185,0.891,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-SEA,Ice Cream & Frozen Treats,14.8,-0.09,0.891,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-SEA,Ice Cream & Frozen Treats,14.7,-0.105,0.891,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-SEA,Ice Cream & Frozen Treats,14.6,-0.119,0.891,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-SEA,Ice Cream & Frozen Treats,16.8,0.2,0.891,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-DEN,Ice Cream & Frozen Treats,30.3,1.066,0.891,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-DEN,Ice Cream & Frozen Treats,30.3,1.066,0.891,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-DEN,Ice Cream & Frozen Treats,28.9,0.943,0.891,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-DEN,Ice Cream & Frozen Treats,29.7,1.014,0.891,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-DEN,Ice Cream & Frozen Treats,27.7,0.837,0.891,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-DEN,Ice Cream & Frozen Treats,23.8,0.494,0.891,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-DEN,Ice Cream & Frozen Treats,23.6,0.476,0.891,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-NYC,Sunscreen & Summer Essentials,17.3,-0.082,0.891,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-NYC,Sunscreen & Summer Essentials,19.9,0.196,0.891,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-NYC,Sunscreen & Summer Essentials,24.4,0.678,0.891,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-NYC,Sunscreen & Summer Essentials,20.6,0.271,0.891,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-NYC,Sunscreen & Summer Essentials,17.7,-0.039,0.891,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-NYC,Sunscreen & Summer Essentials,21.4,0.357,0.891,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-NYC,Sunscreen & Summer Essentials,18.4,0.036,0.891,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-CHI,Sunscreen & Summer Essentials,21.5,0.575,0.891,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-CHI,Sunscreen & Summer Essentials,20.8,0.507,0.891,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-CHI,Sunscreen & Summer Essentials,19.2,0.351,0.891,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-CHI,Sunscreen & Summer Essentials,20.2,0.448,0.891,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-CHI,Sunscreen & Summer Essentials,27.9,1.2,0.891,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-CHI,Sunscreen & Summer Essentials,23.5,0.771,0.891,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-CHI,Sunscreen & Summer Essentials,16.5,0.087,0.891,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-MIA,Sunscreen & Summer Essentials,29.2,0.307,0.891,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-MIA,Sunscreen & Summer Essentials,28.8,0.176,0.891,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-MIA,Sunscreen & Summer Essentials,30.2,0.636,0.891,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-MIA,Sunscreen & Summer Essentials,30.2,0.636,0.891,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-MIA,Sunscreen & Summer Essentials,29.8,0.504,0.891,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-MIA,Sunscreen & Summer Essentials,30.1,0.603,0.891,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-MIA,Sunscreen & Summer Essentials,30.2,0.636,0.891,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-PHX,Sunscreen & Summer Essentials,37.4,0.707,0.891,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-PHX,Sunscreen & Summer Essentials,38.8,0.85,0.891,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-PHX,Sunscreen & Summer Essentials,37.8,0.748,0.891,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-PHX,Sunscreen & Summer Essentials,37.2,0.686,0.891,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-PHX,Sunscreen & Summer Essentials,36.7,0.635,0.891,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-PHX,Sunscreen & Summer Essentials,34.1,0.369,0.891,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-PHX,Sunscreen & Summer Essentials,30.8,0.032,0.891,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-SEA,Sunscreen & Summer Essentials,17.0,0.229,0.891,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-SEA,Sunscreen & Summer Essentials,19.8,0.635,0.891,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-SEA,Sunscreen & Summer Essentials,23.6,1.185,0.891,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-SEA,Sunscreen & Summer Essentials,14.8,-0.09,0.891,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-SEA,Sunscreen & Summer Essentials,14.7,-0.105,0.891,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-SEA,Sunscreen & Summer Essentials,14.6,-0.119,0.891,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-SEA,Sunscreen & Summer Essentials,16.8,0.2,0.891,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-DEN,Sunscreen & Summer Essentials,30.3,1.066,0.891,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-DEN,Sunscreen & Summer Essentials,30.3,1.066,0.891,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-DEN,Sunscreen & Summer Essentials,28.9,0.943,0.891,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-DEN,Sunscreen & Summer Essentials,29.7,1.014,0.891,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-DEN,Sunscreen & Summer Essentials,27.7,0.837,0.891,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-DEN,Sunscreen & Summer Essentials,23.8,0.494,0.891,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-DEN,Sunscreen & Summer Essentials,23.6,0.476,0.891,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-NYC,Hot Beverages & Soup,17.3,-0.082,0.705,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-NYC,Hot Beverages & Soup,19.9,0.196,0.705,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-NYC,Hot Beverages & Soup,24.4,0.678,0.705,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-NYC,Hot Beverages & Soup,20.6,0.271,0.705,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-NYC,Hot Beverages & Soup,17.7,-0.039,0.705,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-NYC,Hot Beverages & Soup,21.4,0.357,0.705,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-NYC,Hot Beverages & Soup,18.4,0.036,0.705,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-CHI,Hot Beverages & Soup,21.5,0.575,0.705,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-CHI,Hot Beverages & Soup,20.8,0.507,0.705,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-CHI,Hot Beverages & Soup,19.2,0.351,0.705,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-CHI,Hot Beverages & Soup,20.2,0.448,0.705,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-CHI,Hot Beverages & Soup,27.9,1.2,0.705,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-CHI,Hot Beverages & Soup,23.5,0.771,0.705,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-CHI,Hot Beverages & Soup,16.5,0.087,0.705,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-MIA,Hot Beverages & Soup,29.2,0.307,0.705,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-MIA,Hot Beverages & Soup,28.8,0.176,0.705,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-MIA,Hot Beverages & Soup,30.2,0.636,0.705,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-MIA,Hot Beverages & Soup,30.2,0.636,0.705,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-MIA,Hot Beverages & Soup,29.8,0.504,0.705,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-MIA,Hot Beverages & Soup,30.1,0.603,0.705,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-MIA,Hot Beverages & Soup,30.2,0.636,0.705,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-PHX,Hot Beverages & Soup,37.4,0.707,0.705,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-PHX,Hot Beverages & Soup,38.8,0.85,0.705,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-PHX,Hot Beverages & Soup,37.8,0.748,0.705,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-PHX,Hot Beverages & Soup,37.2,0.686,0.705,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-PHX,Hot Beverages & Soup,36.7,0.635,0.705,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-PHX,Hot Beverages & Soup,34.1,0.369,0.705,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-PHX,Hot Beverages & Soup,30.8,0.032,0.705,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-SEA,Hot Beverages & Soup,17.0,0.229,0.705,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-SEA,Hot Beverages & Soup,19.8,0.635,0.705,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-SEA,Hot Beverages & Soup,23.6,1.185,0.705,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-SEA,Hot Beverages & Soup,14.8,-0.09,0.705,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-SEA,Hot Beverages & Soup,14.7,-0.105,0.705,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-SEA,Hot Beverages & Soup,14.6,-0.119,0.705,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-SEA,Hot Beverages & Soup,16.8,0.2,0.705,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-DEN,Hot Beverages & Soup,30.3,1.066,0.705,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-DEN,Hot Beverages & Soup,30.3,1.066,0.705,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-DEN,Hot Beverages & Soup,28.9,0.943,0.705,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-DEN,Hot Beverages & Soup,29.7,1.014,0.705,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-DEN,Hot Beverages & Soup,27.7,0.837,0.705,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-DEN,Hot Beverages & Soup,23.8,0.494,0.705,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-DEN,Hot Beverages & Soup,23.6,0.476,0.705,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-NYC,Outerwear & Jackets,17.3,-0.082,0.703,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-NYC,Outerwear & Jackets,19.9,0.196,0.703,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-NYC,Outerwear & Jackets,24.4,0.678,0.703,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-NYC,Outerwear & Jackets,20.6,0.271,0.703,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-NYC,Outerwear & Jackets,17.7,-0.039,0.703,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-NYC,Outerwear & Jackets,21.4,0.357,0.703,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-NYC,Outerwear & Jackets,18.4,0.036,0.703,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-CHI,Outerwear & Jackets,21.5,0.575,0.703,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-CHI,Outerwear & Jackets,20.8,0.507,0.703,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-CHI,Outerwear & Jackets,19.2,0.351,0.703,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-CHI,Outerwear & Jackets,20.2,0.448,0.703,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-CHI,Outerwear & Jackets,27.9,1.2,0.703,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-CHI,Outerwear & Jackets,23.5,0.771,0.703,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-CHI,Outerwear & Jackets,16.5,0.087,0.703,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-MIA,Outerwear & Jackets,29.2,0.307,0.703,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-MIA,Outerwear & Jackets,28.8,0.176,0.703,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-MIA,Outerwear & Jackets,30.2,0.636,0.703,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-MIA,Outerwear & Jackets,30.2,0.636,0.703,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-MIA,Outerwear & Jackets,29.8,0.504,0.703,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-MIA,Outerwear & Jackets,30.1,0.603,0.703,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-MIA,Outerwear & Jackets,30.2,0.636,0.703,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-PHX,Outerwear & Jackets,37.4,0.707,0.703,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-PHX,Outerwear & Jackets,38.8,0.85,0.703,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-PHX,Outerwear & Jackets,37.8,0.748,0.703,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-PHX,Outerwear & Jackets,37.2,0.686,0.703,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-PHX,Outerwear & Jackets,36.7,0.635,0.703,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-PHX,Outerwear & Jackets,34.1,0.369,0.703,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-PHX,Outerwear & Jackets,30.8,0.032,0.703,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-SEA,Outerwear & Jackets,17.0,0.229,0.703,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-SEA,Outerwear & Jackets,19.8,0.635,0.703,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-SEA,Outerwear & Jackets,23.6,1.185,0.703,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-SEA,Outerwear & Jackets,14.8,-0.09,0.703,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-SEA,Outerwear & Jackets,14.7,-0.105,0.703,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-SEA,Outerwear & Jackets,14.6,-0.119,0.703,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-SEA,Outerwear & Jackets,16.8,0.2,0.703,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-DEN,Outerwear & Jackets,30.3,1.066,0.703,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-DEN,Outerwear & Jackets,30.3,1.066,0.703,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-DEN,Outerwear & Jackets,28.9,0.943,0.703,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-DEN,Outerwear & Jackets,29.7,1.014,0.703,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-DEN,Outerwear & Jackets,27.7,0.837,0.703,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-DEN,Outerwear & Jackets,23.8,0.494,0.703,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-DEN,Outerwear & Jackets,23.6,0.476,0.703,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-NYC,Umbrellas & Rain Gear,0.0,-0.422,0.658,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-NYC,Umbrellas & Rain Gear,0.0,-0.422,0.658,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-NYC,Umbrellas & Rain Gear,0.0,-0.422,0.658,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-NYC,Umbrellas & Rain Gear,0.0,-0.422,0.658,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-NYC,Umbrellas & Rain Gear,0.0,-0.422,0.658,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-NYC,Umbrellas & Rain Gear,0.0,-0.422,0.658,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-NYC,Umbrellas & Rain Gear,28.2,2.67,0.658,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-CHI,Umbrellas & Rain Gear,0.0,-0.383,0.658,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-CHI,Umbrellas & Rain Gear,0.0,-0.383,0.658,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-CHI,Umbrellas & Rain Gear,0.0,-0.383,0.658,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-CHI,Umbrellas & Rain Gear,0.0,-0.383,0.658,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-CHI,Umbrellas & Rain Gear,0.0,-0.383,0.658,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-CHI,Umbrellas & Rain Gear,0.0,-0.383,0.658,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-CHI,Umbrellas & Rain Gear,0.0,-0.383,0.658,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-MIA,Umbrellas & Rain Gear,47.5,3.795,0.658,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-MIA,Umbrellas & Rain Gear,22.0,1.515,0.658,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-MIA,Umbrellas & Rain Gear,0.5,-0.407,0.658,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-MIA,Umbrellas & Rain Gear,1.0,-0.363,0.658,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-MIA,Umbrellas & Rain Gear,11.5,0.576,0.658,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-MIA,Umbrellas & Rain Gear,1.8,-0.291,0.658,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-MIA,Umbrellas & Rain Gear,0.9,-0.372,0.658,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-PHX,Umbrellas & Rain Gear,0.0,-0.223,0.658,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-PHX,Umbrellas & Rain Gear,0.0,-0.223,0.658,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-PHX,Umbrellas & Rain Gear,0.0,-0.223,0.658,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-PHX,Umbrellas & Rain Gear,0.0,-0.223,0.658,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-PHX,Umbrellas & Rain Gear,0.1,-0.186,0.658,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-PHX,Umbrellas & Rain Gear,11.4,4.0,0.658,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-PHX,Umbrellas & Rain Gear,3.0,0.888,0.658,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-SEA,Umbrellas & Rain Gear,0.0,-0.535,0.658,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-SEA,Umbrellas & Rain Gear,0.0,-0.535,0.658,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-SEA,Umbrellas & Rain Gear,0.0,-0.535,0.658,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-SEA,Umbrellas & Rain Gear,1.4,-0.28,0.658,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-SEA,Umbrellas & Rain Gear,0.5,-0.444,0.658,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-SEA,Umbrellas & Rain Gear,0.0,-0.535,0.658,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-SEA,Umbrellas & Rain Gear,0.0,-0.535,0.658,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-DEN,Umbrellas & Rain Gear,0.0,-0.314,0.658,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-DEN,Umbrellas & Rain Gear,0.0,-0.314,0.658,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-DEN,Umbrellas & Rain Gear,0.0,-0.314,0.658,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-DEN,Umbrellas & Rain Gear,0.0,-0.314,0.658,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-DEN,Umbrellas & Rain Gear,0.1,-0.289,0.658,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-DEN,Umbrellas & Rain Gear,0.0,-0.314,0.658,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-DEN,Umbrellas & Rain Gear,0.0,-0.314,0.658,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-NYC,Household Staples (control),17.3,-0.082,0.464,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-NYC,Household Staples (control),19.9,0.196,0.464,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-NYC,Household Staples (control),24.4,0.678,0.464,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-NYC,Household Staples (control),20.6,0.271,0.464,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-NYC,Household Staples (control),17.7,-0.039,0.464,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-NYC,Household Staples (control),21.4,0.357,0.464,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-NYC,Household Staples (control),18.4,0.036,0.464,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-CHI,Household Staples (control),21.5,0.575,0.464,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-CHI,Household Staples (control),20.8,0.507,0.464,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-CHI,Household Staples (control),19.2,0.351,0.464,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-CHI,Household Staples (control),20.2,0.448,0.464,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-CHI,Household Staples (control),27.9,1.2,0.464,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-CHI,Household Staples (control),23.5,0.771,0.464,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-CHI,Household Staples (control),16.5,0.087,0.464,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-MIA,Household Staples (control),29.2,0.307,0.464,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-MIA,Household Staples (control),28.8,0.176,0.464,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-MIA,Household Staples (control),30.2,0.636,0.464,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-MIA,Household Staples (control),30.2,0.636,0.464,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-MIA,Household Staples (control),29.8,0.504,0.464,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-MIA,Household Staples (control),30.1,0.603,0.464,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-MIA,Household Staples (control),30.2,0.636,0.464,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-PHX,Household Staples (control),37.4,0.707,0.464,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-PHX,Household Staples (control),38.8,0.85,0.464,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-PHX,Household Staples (control),37.8,0.748,0.464,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-PHX,Household Staples (control),37.2,0.686,0.464,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-PHX,Household Staples (control),36.7,0.635,0.464,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-PHX,Household Staples (control),34.1,0.369,0.464,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-PHX,Household Staples (control),30.8,0.032,0.464,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-SEA,Household Staples (control),17.0,0.229,0.464,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-SEA,Household Staples (control),19.8,0.635,0.464,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-SEA,Household Staples (control),23.6,1.185,0.464,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-SEA,Household Staples (control),14.8,-0.09,0.464,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-SEA,Household Staples (control),14.7,-0.105,0.464,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-SEA,Household Staples (control),14.6,-0.119,0.464,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-SEA,Household Staples (control),16.8,0.2,0.464,0.0,0.0,Low risk - no action needed
+2026-10-06,NM-DEN,Household Staples (control),30.3,1.066,0.464,0.0,0.0,Low risk - no action needed
+2026-10-07,NM-DEN,Household Staples (control),30.3,1.066,0.464,0.0,0.0,Low risk - no action needed
+2026-10-08,NM-DEN,Household Staples (control),28.9,0.943,0.464,0.0,0.0,Low risk - no action needed
+2026-10-09,NM-DEN,Household Staples (control),29.7,1.014,0.464,0.0,0.0,Low risk - no action needed
+2026-10-10,NM-DEN,Household Staples (control),27.7,0.837,0.464,0.0,0.0,Low risk - no action needed
+2026-10-11,NM-DEN,Household Staples (control),23.8,0.494,0.464,0.0,0.0,Low risk - no action needed
+2026-10-12,NM-DEN,Household Staples (control),23.6,0.476,0.464,0.0,0.0,Low risk - no action needed
